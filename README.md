@@ -21,3 +21,4 @@ $Options:
     * Buckets - Buckets to enable before installing any packages with scoop = [string[]]
     * Packages - Packages to install with scoop when $Options.InstallScoopPkgs is $True = [string[]]
     * GlobalPackages - Packages to install for all users with scoop when $Options.InstallScoopPkgs is $True = [string[]]
+    * PackagePostInstall - Commands to happen after installing a package = ${[string] = [string[]]}

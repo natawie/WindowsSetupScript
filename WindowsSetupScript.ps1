@@ -109,6 +109,7 @@ $Options = @{
         GlobalPackages = [string[]](
             "CodeNewRoman-NF-Mono"
         )
+        PackagePostInstall = @{}
     }
 }
 
@@ -224,7 +225,7 @@ Function RemoveOneDrive {
     param ()
     Write-Output "Removing OneDrive"
     Get-Process onedrive | Stop-Process -Force
-    Start-Process "$env:SystemRoot/SysWOW64/OneDriveSetup.exe" "/uninstall"
+    Start-Process "$env:SystemRoot\SysWOW64\OneDriveSetup.exe" "/uninstall"
 }
 
 Function RemoveBloatware {
