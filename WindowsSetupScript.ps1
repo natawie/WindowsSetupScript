@@ -23,12 +23,12 @@
 #>
 
 $Options = @{
-    InstallWingetPkgs = $False
-    InstallScoop = $False
-    InstallScoopPkgs = $False
+    InstallWingetPkgs = $True
+    InstallScoop = $True
+    InstallScoopPkgs = $True
     DarkMode = $True
-    DisableTelemetry = $False
-    InstallWsl = $False
+    DisableTelemetry = $True
+    InstallWsl = $True
     RemoveOneDrive = $True
     RemoveBloatware = $True
     WslDistro = [string]"Debian" # select one listed by "wsl --list --online"
@@ -90,7 +90,7 @@ $Options = @{
             )
             "LGUG2Z.komorebi" = [string[]](
                 "Add-Content -Value `"komorebic start -a`" -Path `"$HOME/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Start-up/komorebi.bat`"",
-                "Invoke-WebRequest `"`" -OutFile `"$HOME/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Start-up/komorebi.ahk`""
+                "Invoke-WebRequest `"https://raw.githubusercontent.com/natawie/WindowsSetupScript/main/komorebi.ahk`" -OutFile `"$HOME/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Start-up/komorebi.ahk`""
             )
         }
     }
